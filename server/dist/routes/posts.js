@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const posts_1 = require("../controllers/posts");
+const authcheck_1 = require("../middleware/authcheck");
+const router = express.Router();
+router.get('/:id', posts_1.Posts.getPost);
+router.get('/', posts_1.Posts.getPosts);
+router.get('/search/posts', posts_1.Posts.getPostsBySearchAndTags);
+router.post('/', authcheck_1.default.authCheck, posts_1.Posts.createPost);
+router.patch('/:id', authcheck_1.default.authCheck, posts_1.Posts.updatePost);
+router.patch('/:id/likedPost', authcheck_1.default.authCheck, posts_1.Posts.likePost);
+router.delete('/:id', authcheck_1.default.authCheck, posts_1.Posts.deletePost);
+exports.default = router;
