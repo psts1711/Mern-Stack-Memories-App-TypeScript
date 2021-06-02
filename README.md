@@ -1,3 +1,3 @@
-Mern Stack Memories App TypeScript Part - 1, 2 and 3 - Typescript
+# Mern Stack Memories App TypeScript Part - 1, 2 and 3
 
-Special Thanks JavaScript Mastery
+# Special Thanks JavaScript Mastery
